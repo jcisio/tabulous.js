@@ -1,7 +1,9 @@
 tabulous.js
 ===========
 
-A jQuery tabs module for todays web!
+An extremely lightweight jQuery tabs module for todays web!
+
+Less than 2.5 KB CSS + JavaScript (1.3 KB gzipped).
 
 ### Documentation
 
