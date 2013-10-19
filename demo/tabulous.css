@@ -1,0 +1,25 @@
+body {
+  background: #655c89;
+}
+#wrapper {
+  padding: 20px;
+}
+#tabs {
+  padding: 10px;
+}
+#tabs > div {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+/* They must be the same. */
+#tabs > div,
+#tabs > div > div {
+  padding: 20px 10px;
+}
+.tabulous-js > ul a {
+  padding: 5px 10px;
+}
+.tabulous-js > ul a.active {
+  background: white;
+  color: #655c89;
+}
