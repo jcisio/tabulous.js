@@ -10,7 +10,7 @@ Less than 2.5 KB CSS + JavaScript (1.3 KB gzipped).
 This is a fork of Tabulous.js, which is much simpler:
 
 * All options and customized CSS are removed.
-* Tabs are now based on order. They are no longer required to have IDs.
+* No need to declare tabs, they are automatically built.
 
 #### ..:: Demo
 For a demo visit http://git.aaronlumsden.com/tabulous.js/
@@ -19,22 +19,20 @@ For a demo visit http://git.aaronlumsden.com/tabulous.js/
 
 `````
   <div id="tabs">
-  	<ul>
-			<li><a href="#tabs-1" title="">Tab 1</a></li>
-			<li><a href="#tabs-2" title="">Tab 2</a></li>
-			<li><a href="#tabs-3" title="">Tab 3</a></li>
-		</ul>
-		<div>
-			<div id="tabs-1">
-				<!--tab content-->
-			</div>
-			<div id="tabs-2">
-			  <!--tab content-->
-			</div>
-			<div id="tabs-3">
-		    <!--tab content-->
-			</div>
-		</div>
+    <div class="wrapper">
+      <div>
+        <h2>Tab 1</h2>
+        <!--tab content-->
+      </div>
+      <div>
+        <h2>Tab 2</h2>
+        <!--tab content-->
+      </div>
+      <div>
+        <h2>Tab 3</h2>
+        <!--tab content-->
+      </div>
+    </div>
   </div>
 `````
 ##### Initiate the plugin
@@ -45,6 +43,8 @@ At its most basic level you can initiate the plugin like:
 
 `````					
 $(document).ready(function ($) {
-  $('#tabs').tabulous();
+  $('#tabs').tabulous({
+    target: 'h2'
+  });
 });
 `````

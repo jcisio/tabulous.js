@@ -16,10 +16,10 @@ body {
 #tabs > div > div {
   padding: 20px 10px;
 }
-.tabulous-js > ul a {
+.tabulous-tabs li {
   padding: 5px 10px;
 }
-.tabulous-js > ul a.active {
+.tabulous-tabs li.active {
   background: white;
   color: #655c89;
 }

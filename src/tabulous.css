@@ -1,18 +1,16 @@
-.tabulous-js > ul li {
-  float: left;
-}
-
-.tabulous-js > ul a {
+.tabulous-tabs li {
+  cursor: hand;
   display: block;
+  float: left;
   text-decoration: none;
 }
 
-.tabulous-js > div {
+.tabulous-content {
   overflow: hidden;
   position: relative;
 }
 
-.tabulous-js > div > div {
+.tabulous-content > div {
   position: absolute;
   top: 0;
 }
