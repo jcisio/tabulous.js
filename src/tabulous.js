@@ -7,13 +7,14 @@
     }, options);
 
     var me = $(element).addClass('tabulous-js');
-    var tabs = $('<ul/>').addClass('tabulous-tabs').prependTo(me);
-    var content = me.find('>div').addClass('tabulous-content transition');
+    var tabs = $('<ul/>').addClass('tabulous-tabs');
+    var content = me.find('>div').addClass('tabulous-content');
 
     content.find(options.target).each(function() {
-      $('<li>').html($(this).html()).appendTo(tabs);
+      $('<li>' + $(this).html() + '</li>').appendTo(tabs);
       $(this).remove();
     });
+    tabs.prependTo(me);
     tabs.find('li:first-child').find('a').addClass('active');
     tabs.find('li:last-child').after('<span style="clear:both;display:block"/>');
     content.find('>div').addClass('make_transist');

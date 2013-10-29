@@ -15,7 +15,7 @@
   top: 0;
 }
 
-.transition {
+.tabulous-content {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
