@@ -1,3 +1,3 @@
 $(document).ready(function($) {
-  $('#tabs').tabulous({target: 'h2'});
+  $('#tabs').tabulous();
 });

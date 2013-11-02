@@ -3,21 +3,21 @@
   var init = function (element, options) {
     options = options || {};
     options = $.extend({
-      target: '.title'
+      target: '>h2'
     }, options);
 
     var me = $(element).addClass('tabulous-js');
     var tabs = $('<ul/>').addClass('tabulous-tabs');
     var content = me.find('>div').addClass('tabulous-content');
+    var items = content.find('>div').addClass('make_transist');
 
-    content.find(options.target).each(function() {
+    items.find(options.target).each(function() {
       $('<li>' + $(this).html() + '</li>').appendTo(tabs);
       $(this).remove();
     });
     tabs.prependTo(me);
     tabs.find('li:first-child').find('a').addClass('active');
     tabs.find('li:last-child').after('<span style="clear:both;display:block"/>');
-    content.find('>div').addClass('make_transist');
     show(tabs, content, 1);
     tabs.on('click', 'li', function () {
       var n = tabs.find('li').index(this) + 1;
