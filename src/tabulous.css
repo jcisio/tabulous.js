@@ -1,5 +1,5 @@
 .tabulous-tabs li {
-  cursor: hand;
+  cursor: pointer;
   display: block;
   float: left;
   text-decoration: none;
